@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fluid Gallery</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+      }
+      .container {
+        width: 100vw;
+        background-color: lightgray;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        border-radius: 20px;
+      }
+      .box img:hover {
+        filter: grayscale(1);
+        /* transform: scale(1.03); */
+        /* transform: translateX(50px) rotate(30deg); */
+        transform:skew(30deg, 20deg);
+     
+      }
+      .box1 {
+        height: 100%;
+        width: 100%;
+        background-image: url(img\ 11.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      .box2 {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-image: url(img\ 12.jpg);
+        background-position: center;
+      }
+
+      .box3 {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-image: url(img\ 13.jpg);
+        background-position: center;
+      }
+      .box4 {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-image: url(img\ 14.jpg);
+        background-position: center;
+      }
+      .box5 {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-image: url(img\ 15.jpg);
+        background-position: center;
+      }
+      .box6 {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-image: url(img\ 16.jpg);
+        background-position: center;
+      }
+      .box7 {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-image: url(img\ 17.jpg);
+        background-position: center;
+      }
+      .box8 {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-image: url(img\ 18.jpg);
+        background-position: center;
+      }
+      .box9 {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-image: url(img\ 19.jpg);
+        background-position: center;
+      }
+
+      .box10 {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-image: url(img\ 20.jpg);
+        background-position: center;
+      }
+      .box11 {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-image: url(img\ 21.jpg);
+        background-position: center;
+      }
+      .box12 {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-image: url(img\ 22.1.jpg);
+        background-position: center;
+      }
+      .box13 {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-image: url(0.jpg);
+        background-position: center;
+      }
+      .box14 {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-image: url(3.webp);
+        background-position: center;
+      }
+      .box15 {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-image: url(2.jpg);
+        background-position: center;
+      }
+      .box16 {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-image: url(1.webp);
+        background-position: center;
+      }
+
+      .box > h1 {
+        font-weight: bold;
+        color: white;
+      }
+      .box {
+        height: 50vh;
+        width: 25vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        filter: grayscale(100%);
+      }
+      .box:hover {
+        /* transform: scale(1.15); */
+       /* transform: translate(20px) rotate(30deg); */
+        transform: skew(30deg 20deg); 
+       /* transform: rotate(0.2turn); */
+        background-blend-mode: color-dodge;
+        filter: grayscale(0%);
+        cursor: pointer;
+      }
+      .iner-header img {
+        width: 120px;
+        height: 50px;
+      }
+      .iner-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: black;
+      }
+      .header {
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        background-color: RGB(255,153,204);
+      }
+      .title {
+        padding: 50px 25px;
+        font-size: 24px;
+      }
+      .title1:hover {
+        background-color: gray;
+        cursor: pointer;
+      }
+      .title2:hover {
+        background-color: honeydew;
+        cursor: pointer;
+      }
+      .title3:hover {
+        background-color: mediumspringgreen ;
+        cursor: pointer;
+      }
+      .title4:hover {
+        background-color: darkkhaki;
+        cursor: pointer;
+      }
+      .title5:hover {
+        background-color: violet;
+        cursor: pointer;
+      }
+
+      .footercontainer {
+        display: flex;
+        flex-direction: column;
+        background-color:RGB(255,153,204) ;
+      }
+      .socialicons {
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .social {
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+      }
+      .copy {
+        font-size: 15px;
+        font-weight: 600;
+        text-align: center;
+        color: red;
+        letter-spacing: 1px;
+      }
+      @media screen and (min-width: 480px) and (max-width: 990px) {
+        .title {
+          display: none;
+        }
+        .container {
+          width: 100vw;
+          background-color: skyblue;
+          
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+          justify-content: center;
+          align-items: center;
+        }
+        .box {
+          height: 50vh;
+          width: 50vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          filter: grayscale(100%);
+        }
+      }
+      @media screen and (max-width: 479px) {
+        .title {
+          display: none;
+        }
+        .container {
+          width: 100vw;
+          background-color: skyblue;
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          justify-content: center;
+          align-items: center;
+        }
+        .box {
+          height: 50vh;
+          width: 100vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          filter: grayscale(100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="md">
+      <div class="header">
+        <div class="iner-header">
+          <img src="https://www.svgrepo.com/show/286480/gallery.svg" />
+          <h1>FLUID GALLERY</h1>
+        </div>
+        <div class="iner-header fluid-id">
+          <div class="title title1">1ST FLUID</div>
+          <div class="title title2">2ND FLUID</div>
+          <div class="title title3">3RD FLUID</div>
+          <div class="title title4">COLUMNS</div>
+          <div class="title title5">MESSAGE</div>
+        </div>
+      </div>
+      <div class="body1">
+        <div class="container">
+          <div class="box box1">
+            <h1>PHOTO ONE</h1>
+          </div>
+          <div class="box box2">
+            <h1>PHOTO TWO</h1>
+          </div>
+          <div class="box box3">
+            <h1>PHOTO THREE</h1>
+          </div>
+          <div class="box box4">
+            <h1>PHOTO FOUR</h1>
+          </div>
+          <div class="box box5">
+            <h1>PHOTO FIVE</h1>
+          </div>
+          <div class="box box6">
+            <h1>PHOTO SIX</h1>
+          </div>
+          <div class="box box7">
+            <h1>PHOTO SEVEN</h1>
+          </div>
+          <div class="box box8">
+            <h1>PHOTO EIGHT</h1>
+          </div>
+          <div class="box box9">
+            <h1>PHOTO NINE</h1>
+          </div>
+          <div class="box box10">
+            <h1>PHOTO TEN</h1>
+          </div>
+          <div class="box box11">
+            <h1>PHOTO ELEVEN</h1>
+          </div>
+          <div class="box box12">
+            <h1>PHOTO TWELVE</h1>
+          </div>
+          <div class="box box13">
+            <h1>PHOTO THIRTEEN</h1>
+          </div>
+          <div class="box box14">
+            <h1>PHOTO FOURTEEN</h1>
+          </div>
+          <div class="box box15">
+            <h1>PHOTO FIFTEEN</h1>
+          </div>
+          <div class="box box16">
+            <h1>PHOTO SIXTEEN</h1>
+          </div>
+        </div>
+      </div>
+      <div class="footercontainer">
+        <div class="socialicons">
+          <img src="https://www.svgrepo.com/show/183607/facebook.svg" class="social" />
+          <img src="https://www.svgrepo.com/show/205305/twitter.svg" class="social" />
+          <img src="https://www.svgrepo.com/show/111199/instagram.svg" class="social" />
+          <img src="https://www.svgrepo.com/show/382726/linkedin-linked-in.svg" class="social" />
+          <img
+            src="https://cdn.iconscout.com/icon/free/png-256/free-be-1653081-1402369.png"
+            class="social"
+          />
+        </div>
+        <p class="copy">
+          copyright &copy:2024; Designed by SHIVANI ANTHOJI
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
